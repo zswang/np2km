@@ -1,4 +1,4 @@
-nk2km
+np2km
 ====
 
 ## 概要
@@ -12,6 +12,8 @@ $ npm install np2km -g
 ```
 
 ## 使用
+
++ 使用前先确认已经调用 `npm install`
 
 ```
 $ cd <dir>
