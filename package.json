@@ -1,0 +1,37 @@
+{
+  "name": "np2km",
+  "version": "0.0.1",
+  "description": "Analysis of NPM dependencies, and generate a file kityminder file",
+  "main": "lib/np2km.js",
+  "bin": {
+    "np2km": "cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zswang/np2km.git"
+  },
+  "keywords": [
+    "kityminder",
+    "npm",
+    "dependencie"
+  ],
+  "author": "zswang<wjhu111@21cn.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zswang/np2km/issues"
+  },
+  "homepage": "https://github.com/zswang/np2km",
+  "devDependencies": {
+    "mocha": "2.0.1",
+    "should": "4.1.0",
+    "jshint": "2.5.8"
+  },
+  "dependencies": {
+    "colors": "1.0.3",
+    "optimist": "0.6.1"
+  },
+  "scripts": {
+    "test": "mocha -R spec",
+    "lint": "jshint lib/*.js"
+  }
+}
