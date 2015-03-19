@@ -1,10 +1,10 @@
 {
   "name": "np2km",
-  "version": "0.0.4",
+  "version": "0.0.11",
   "description": "Analysis of NPM dependencies, and generate a file kityminder file",
-  "main": "./lib/np2km.js",
+  "main": "./index",
   "bin": {
-    "np2km": "./cli"
+    "np2km": "bin/cmd"
   },
   "repository": {
     "type": "git",
