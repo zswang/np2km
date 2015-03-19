@@ -25,9 +25,9 @@ if (argv._.length >= 2) {
 
 var json = np2km(argv);
 if (json && json.data) {
-	var output = path.join(path.dirname(filename), json.data.text + '.km');
+	var output = json.data.text + '.npm.km';
 	fs.writeFileSync(output, JSON.stringify(json));
-	console.log('%j np2km output complete.', json.data.text + '.km');
+	console.log('%j np2km output complete.', output);
 }
 else {
 	console.log('none.');
