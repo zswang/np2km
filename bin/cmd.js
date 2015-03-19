@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var np2km = require('./lib/np2km');
+var np2km = require('../');
 var optimist = require('optimist');
 
 var argv = optimist
