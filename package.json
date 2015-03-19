@@ -1,6 +1,6 @@
 {
   "name": "np2km",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Analysis of NPM dependencies, and generate a file kityminder file",
   "main": "./index",
   "bin": {
