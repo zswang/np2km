@@ -1,6 +1,6 @@
 {
   "name": "np2km",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "Analysis of NPM dependencies, and generate a file kityminder file",
   "main": "./index",
   "bin": {
@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "colors": "1.0.3",
-    "optimist": "0.6.1"
+    "optimist": "0.6.1",
+    "semver": "4.3.1",
+    "glob": "5.0.3"
   },
   "scripts": {
     "test": "mocha -R spec",
