@@ -17,7 +17,7 @@ module.exports = function(opts) {
       var json = JSON.parse(fs.readFileSync(filename));
     }
     catch (ex) {
-      console.log(ex);
+      console.log('loadModule(filename = %j) error: %j', filename, ex);
       return;
     }
     modules[json.name] = modules[json.name] || {
@@ -64,7 +64,7 @@ module.exports = function(opts) {
     }
     var module = modules[name];
     if (!module) {
-      console.log('error');
+      console.log('parse(name = %j, version = %j) module not exits.', name, version);
       return;
     }
 
@@ -74,7 +74,7 @@ module.exports = function(opts) {
 
     var currVersion = module.versions[versions[0] || module.$$versions[0]];
     if (!currVersion) {
-      console.log('error');
+      console.log('parse(name = %j, version = %j) version not exits.', name, version);
       return;
     }
 

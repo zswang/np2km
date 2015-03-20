@@ -1,9 +1,11 @@
 np2km
 ====
 
+脑图效果：[NPM 依赖哪些 NPM](http://naotu.baidu.com/viewshare.html?shareId=au94741qdrsw)
+
 ## 概要
 
-NMP 依赖生成为脑图的工具
+NPM 依赖生成为脑图的工具
 
 ## 安装
 
