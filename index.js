@@ -10,6 +10,7 @@ var semver = require('semver');
 module.exports = function(opts) {
   opts = opts || {};
   var modules = {};
+  var packageFiles = {};
 
   function loadModule(filename) {
     try {
@@ -45,12 +46,22 @@ module.exports = function(opts) {
 
   glob('node_modules/**/package.json', {
     sync: true
-  }).forEach(loadModule);
+  }).forEach(function(filename) {
+    var moduleName = filename.replace(/^.*?([^\/]+)\/package\.json$/, '$1');
+    packageFiles[moduleName] = packageFiles[moduleName] || [];
+    packageFiles[moduleName].push(filename);
+  });
 
   var root = {};
 
   function parse(node, name, version, level) {
     // console.log('parse(name = %j, version = %j)', name, version);
+    if (packageFiles[name]) {
+      packageFiles[name].forEach(function(filename) {
+        loadModule(filename);
+      });
+      packageFiles[name] = null;
+    }
     var module = modules[name];
     if (!module) {
       console.log('error');
